@@ -11,6 +11,18 @@ import UserOrderDetailPage from './user/UserOrderDetailPage';
 import UserOrderPage from './user/UserOrderPage';
 import UserProfilePage from './user/UserProfilePage'
 
+//Admin
+import AdminAnalyticPage from './admin/AdminAnalyticPage';
+import AdminChatPage from './admin/AdminChatPage';
+import AdminCreateProductPage from './admin/AdminCreateProductPage';
+import AdminEditProductPage from './admin/AdminEditProductPage';
+import AdminEditUserPage from './admin/AdminEditUserPage';
+import AdminOrderDetailPage from './admin/AdminOrderDetailPage';
+import AdminOrderPage from './admin/AdminOrderPage';
+import AdminProductPage from './admin/AdminProductPage';
+import AdminUserPage from './admin/AdminUserPage';
+
+
 export {
     CartPage,
     LoginPage,
@@ -21,5 +33,14 @@ export {
     UserCartDetailPage,
     UserOrderDetailPage,
     UserOrderPage,
-    UserProfilePage
+    UserProfilePage,
+    AdminAnalyticPage,
+    AdminChatPage,
+    AdminCreateProductPage,
+    AdminEditProductPage,
+    AdminEditUserPage,
+    AdminOrderDetailPage,
+    AdminOrderPage,
+    AdminProductPage,
+    AdminUserPage
 }
