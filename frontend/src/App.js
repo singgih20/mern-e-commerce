@@ -23,11 +23,12 @@ import {
   AdminProductPage,
   AdminUserPage
 } from './pages';
-import { ProtectedRoutesComponent } from './components'
+import { ProtectedRoutesComponent, HeaderComponent, FooterComponent } from './components'
 
 export default function App() {
   return (
     <BrowserRouter>
+    <HeaderComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product-list" element={<ProductListPage />} />
@@ -59,6 +60,7 @@ export default function App() {
           <Route path="/admin/analytic" element={<AdminAnalyticPage />} />
         </Route>
       </Routes>
+      <FooterComponent />
     </BrowserRouter>
   )
 }
