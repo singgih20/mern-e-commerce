@@ -23,21 +23,23 @@ import {
   AdminProductPage,
   AdminUserPage
 } from './pages';
-import { ProtectedRoutesComponent, HeaderComponent, FooterComponent } from './components'
+import { ProtectedRoutesComponent, HeaderComponent, FooterComponent, RoutesWithUserChatComponent } from './components'
 
 export default function App() {
   return (
     <BrowserRouter>
     <HeaderComponent />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/product-list" element={<ProductListPage />} />
-        <Route path="/product-detail" element={<ProductDetailPage />} />
-        <Route path="/product-detail/:id" element={<ProductDetailPage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="*" element={"Not Found 404"} />
+        <Route element={<RoutesWithUserChatComponent />} >
+          <Route path="/" element={<HomePage />} />
+          <Route path="/product-list" element={<ProductListPage />} />
+          <Route path="/product-detail" element={<ProductDetailPage />} />
+          <Route path="/product-detail/:id" element={<ProductDetailPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="*" element={"Not Found 404"} />
+        </Route>
 
         {/* User Protected Routes */}
         <Route element={<ProtectedRoutesComponent isAdmin={false} />}>
@@ -46,6 +48,7 @@ export default function App() {
           <Route path="/user/cart-detail" element={<UserCartDetailPage />} />
           <Route path="/user/order-detail" element={<UserOrderDetailPage />} />
         </Route>
+    
 
         {/* Admin Protected Routes */}
         <Route element={<ProtectedRoutesComponent isAdmin={true} />}>
