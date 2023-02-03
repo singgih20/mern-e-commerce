@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import { Badge, Form, Dropdown, DropdownButton, Button, InputGroup } from 'react-bootstrap'
 function HeaderComponent() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -11,8 +11,25 @@ function HeaderComponent() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
+            <InputGroup>
+              <DropdownButton title="All">
+                <Dropdown.Item href="#">Action</Dropdown.Item>
+                <Dropdown.Item href="#">Another action</Dropdown.Item>
+                <Dropdown.Item href="#">Something else</Dropdown.Item>
+              </DropdownButton>
+              <Form.Control type="text" placeholder="Normal text" />
+              <Button variant="warning">Warning</Button>
+            </InputGroup>
+          </Nav>
+          <Nav>
             <Nav.Link href="#features">Features</Nav.Link>
             <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link href="#pricing">
+              <Badge pill bg="danger">
+                1
+              </Badge>
+              CART
+            </Nav.Link>
             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -24,12 +41,6 @@ function HeaderComponent() {
                 Separated link
               </NavDropdown.Item>
             </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
