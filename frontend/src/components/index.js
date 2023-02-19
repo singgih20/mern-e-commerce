@@ -5,6 +5,13 @@ import UserChatComponent from "./user/UserChatComponent";
 import RoutesWithUserChatComponent from "./user/RoutesWithUserChatComponent";
 import ProductCarouselComponent from "./ProductCarouselComponent";
 import CategoryCardComponent from "./CategoryCardComponent";
+import AttributesFilterComponent from "./filterQueryResultOptions/AttributesFilterComponent";
+import CategoryFilterComponent from "./filterQueryResultOptions/CategoryFilterComponent";
+import PriceFilterComponent from "./filterQueryResultOptions/PriceFilterComponent";
+import RatingFilterComponent from "./filterQueryResultOptions/RatingFilterComponent";
+import PaginationComponent from "./PaginationComponent";
+import ProductForListComponent from "./ProductForListComponent";
+import SortOptionsComponent from "./SortOptionsComponent";
 
 export {
     ProtectedRoutesComponent,
@@ -13,5 +20,12 @@ export {
     UserChatComponent,
     RoutesWithUserChatComponent,
     ProductCarouselComponent,
-    CategoryCardComponent
+    CategoryCardComponent,
+    AttributesFilterComponent,
+    CategoryFilterComponent,
+    PriceFilterComponent,
+    RatingFilterComponent,
+    PaginationComponent,
+    ProductForListComponent,
+    SortOptionsComponent
 }
