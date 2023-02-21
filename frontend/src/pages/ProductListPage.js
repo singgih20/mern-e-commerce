@@ -6,12 +6,13 @@ export default function ProductListPage() {
   return (
     <Container>
       <Row>
-        <Col md={3} style={{backgroundColor: 'red'}}>
+        <Col md={3}>
           <ListGroup variant="flush">
-            <ListGroup.Item>
+            <ListGroup.Item className="mb-3 mt-3">
               <SortOptionsComponent />
             </ListGroup.Item>
             <ListGroup.Item>
+              FILTER: <br />
               <PriceFilterComponent />
             </ListGroup.Item>
             <ListGroup.Item>
@@ -32,8 +33,12 @@ export default function ProductListPage() {
             </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={9} style={{backgroundColor: 'yellow'}}>
-          <ProductForListComponent />
+        <Col md={9}>
+          {Array.from({length: 5}).map((_, idx) => {   
+            return (
+              <ProductForListComponent key={idx} idx={idx} images={["games", "monitors", "tablets", "games", "monitors"]} />
+            )
+          })}
           <PaginationComponent />
         </Col>
       </Row>
